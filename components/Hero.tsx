@@ -30,7 +30,7 @@ export default function Hero() {
                 </div>
 
                
-                   {/* <LandingImages /> */}
+                   <LandingImages />
                
             </Container>
         </div>

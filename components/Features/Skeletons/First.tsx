@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function SkeletonOne() {
     return (
-        <div className='perspective-distant translate-x-20 translate-y-10 h-full w-full ' style={{ "transform": "rotateZ(9deg) rotateY(-20deg) rotateX(30deg) scale(1.2)" }}>
+        <div className="h-full w-full perspective-[1200px] [transform:translateX(5rem)_translateY(2.5rem)_rotateZ(9deg)_rotateY(-20deg)_rotateX(30deg)_scale(1.2)]">
             <SkeletonCard className='absolute top-5 left-4 z-10' icon={<IconPrison className='size-4' />} title='Risk Analysis' description='Creates clear, ready-to-use campaign briefs using product info, audience data and past results.' badge={<Badge text='40s' variants='warning' />} />
 
 
@@ -13,23 +13,23 @@ export default function SkeletonOne() {
 
             <SkeletonCard className='absolute top-28 left-10 z-10' icon={<IconCircleDashedCheck className='size-4' />} title='Campaign Planner' description='Creates clear, ready-to-use campaign briefs using product info, audience data and past results.' badge={<Badge text='120s' variants='danger' />} />
 
-            
+
         </div>
     )
 }
 
-const SkeletonCard = ({className, icon, title, description, badge }: {
+const SkeletonCard = ({ className, icon, title, description, badge }: {
     icon: React.ReactNode,
     title: string,
     description: string,
-    className:string,
+    className: string,
     badge: React.ReactNode
 }) => {
     return (
         <div className={cn('max-w-[85%] h-fit my-auto mx-auto p-3 w-full rounded-2xl border-neutral-200 shadow-2xl bg-neutral-100 border-2 dark:border-neutral-700', className)}>
             <div className='flex gap-3'>
                 {icon}
-                <p className='font-bold text-sm'>
+                <p className='font-bold text-sm dark:text-white'>
                     {title}
                 </p>
                 {badge}
@@ -39,9 +39,9 @@ const SkeletonCard = ({className, icon, title, description, badge }: {
             </p>
             <div className='flex items-center gap-2 flex-wrap'>
                 <Tag text='Google Ads' />
-                    <Tag text='SaaS' />
-                    <Tag text='Content' />
-                </div>
+                <Tag text='SaaS' />
+                <Tag text='Content' />
+            </div>
         </div>
     )
 }
@@ -84,8 +84,8 @@ const Badge = ({ variants, text }: { variants: "default" | "success" | "warning"
     return (
         <div className={cn("p-1 py-0.5 rounded-full flex items-center w-fit gap-1",
             variants === "default" && "bg-neutral-200/50  dark:bg-neutral-800",
-            variants === "success" && "bg-green-300/50 border border-green-400 text-green-500 dark:bg-green-500",
-            variants === "warning" && "bg-yellow-300/50 border border-yellow-400 text-yellow-500 dark:bg-yellow-500",
+            variants === "success" && "bg-green-300/10 border border-green-400 text-green-500 dark:bg-green-500",
+            variants === "warning" && "bg-yellow-300/10 border border-yellow-400 text-yellow-500 dark:bg-yellow-500",
             variants === "danger" && "border border-red-400 text-red-500 bg-red-300/10 dark:bg-red-500"
         )}>
             <IconClock className={cn("size-3")} />

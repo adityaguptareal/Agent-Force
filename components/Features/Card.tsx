@@ -27,6 +27,6 @@ export const CardTitle = ({ className, children }: { className?: string, childre
 
 export const CardSkeleton=({className,children}: {className?: string,children?: React.ReactNode})=>{
     return (
-        <div className={cn("min-h-40 md:min-h-80 overflow-hidden bg relative perspective-distant mask-radial-from-50% mask-b-from-50% mask-r-from-10%", className)}>{children}</div>
+        <div className={cn("min-h-40 md:min-h-80 overflow-hidden bg relative perspective-distant mask-radial-from-50% mask-b-from-70%", className)}>{children}</div>
     )
 }
