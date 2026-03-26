@@ -16,7 +16,7 @@ export default function SkeletonThird() {
                 colorDarkVar=" -- color-neutral-500"
                 glowColorDarkVar=" -- color-sky-800"
                 backgroundOpacity={0}
-                speedMin={0.3}
+                speedMin={0.5}
                 speedMax={1.6}
                 speedScale={1}
 
